@@ -1,0 +1,100 @@
+/* RESET */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: "Courier New", monospace;
+}
+
+/* ROOT FRAME */
+.hmi-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #cfc9b6; /* panel body */
+}
+
+/* HEADER */
+.hmi-header {
+  height: 70px;
+  background: linear-gradient(#d8d1be, #bfb8a5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 4px solid #9a9482;
+  letter-spacing: 2px;
+}
+
+/* SCREEN AREA */
+.device-grid {
+  flex: 1;
+  background: black;
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+
+  /* HMI screen depth */
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.8);
+}
+
+/* DEVICE BUTTON */
+.device-btn {
+  position: relative;
+
+  background: #1f3248;
+  color: #f5f5dc;
+
+  border: 3px solid #7a7a7a;
+  border-radius: 4px;
+
+  font-size: 18px;
+  padding: 25px;
+
+  cursor: pointer;
+
+  /* HMI effect */
+  box-shadow:
+    inset 0 0 10px rgba(255,255,255,0.05),
+    0 4px 8px rgba(0,0,0,0.7);
+
+  transition: 0.2s;
+}
+
+/* PRESS EFFECT */
+.device-btn:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+}
+
+/* HOVER */
+.device-btn:hover {
+  background: #2e4a70;
+}
+
+/*  STATUS DOT (DYNAMIC GREEN/RED) */
+.status-dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+/* FOOTER */
+.hmi-footer {
+  height: 60px;
+  background: linear-gradient(#d8d1be, #bfb8a5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-top: 4px solid #9a9482;
+  letter-spacing: 1px;
+}
