@@ -1,0 +1,176 @@
+/* FULL SCREEN RESET */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", monospace;
+}
+
+/* ROOT FULLSCREEN */
+.hmi-root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: #dcd6c8; /* outer panel color */
+}
+
+/* HEADER */
+.hmi-header {
+  height: 60px;
+  background: #cfc9b6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.hmi-header .title {
+  font-size: 20px;
+}
+
+.hmi-header .time {
+  font-size: 14px;
+}
+
+.hmi-header .device {
+  font-size: 14px;
+}
+
+/* SCREEN AREA */
+.hmi-screen {
+  flex: 1;
+  background: black;
+  color: #f5f5dc;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* PANEL TITLE */
+.panel-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* TABLE */
+.table {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 15px;
+  font-size: 20px;
+}
+
+/* ================= FOOTER ================= */
+.hmi-footer {
+  height: auto;
+  min-height: 110px;
+
+  background: #cfc9b6;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 25px;
+  box-sizing: border-box;
+
+  position: relative; /* IMPORTANT */
+  z-index: 1;
+}
+
+/* RETURN BUTTON */
+.hmi-footer button {
+  background: #e5dfcf;
+  border: 2px solid #999;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ================= EXPORT BOX ================= */
+.export-box {
+  background: #e9e4d4;
+  border: 2px solid #999;
+  padding: 10px 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+
+  min-width: 260px;
+}
+
+/* TITLE */
+.export-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* INPUTS */
+.export-box input {
+  width: 180px;
+  padding: 4px;
+}
+
+/* BUTTON */
+.export-box button {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* ================= DROPDOWN FIX ================= */
+.hmi-root {
+  overflow: visible;
+}
+
+.hmi-screen {
+  overflow: visible;  /* VERY IMPORTANT */
+}
+
+/* force calendar dropdown above everything */
+input[type="datetime-local"] {
+  position: relative;
+  z-index: 9999;
+}
+
+
+/* EXPORT INNER LAYOUT */
+.export-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ROW */
+.export-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+/* LABEL */
+.export-row label {
+  width: 40px;
+}
+
+/* INPUTS */
+.export-row input {
+  width: 110px;
+  padding: 3px;
+  border: 1px solid #777;
+}
+
+/* BUTTON */
+.export-inner button {
+  margin-top: 5px;
+}
